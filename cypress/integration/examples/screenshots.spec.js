@@ -6,5 +6,6 @@ describe('Taking screenshots', ()=> {
 
     it('single element screenshot', ()=> {
         cy.get('header').screenshot()
+        cy.get('#populate').screenshot()
     })
 })
