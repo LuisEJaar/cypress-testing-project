@@ -41,10 +41,23 @@ describe('Abstraction with classes', () => {
 
   afterEach(function () {
     //runs after each it block in the describe
-    
-  })
 
-	it('should scroll down and up on the page', () => {
+  })
+ 
+  //if you want to skip an it then you
+  //add .skip after the it
+
+	it.skip('should scroll down and up on the page', () => {
+		HomePage.scrollToBottom();
+  });
+  
+  //if you only want to run one then
+  //add .only after the it
+  it.only('should scroll down and up on the page', () => {
+		HomePage.scrollToBottom();
+  });
+
+  it('should scroll down and up on the page', () => {
 		HomePage.scrollToBottom();
 		HomePage.wait(3000);
     HomePage.scrollToTop();
